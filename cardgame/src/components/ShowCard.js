@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import axios from "axios";
-import ShowCardResult from "./ShowCardResult";
+import AllCard from "./AllCard";
 
 const ShowCard = () => {
     const [card, setCard] = useState([])
@@ -16,7 +16,7 @@ const ShowCard = () => {
     return (
         <div>
             <button onClick={fetchCards}>Show cards ! </button>
-            <ShowCardResult data={card}/>
+            <AllCard data={card}/>
         </div>
     );
 };
