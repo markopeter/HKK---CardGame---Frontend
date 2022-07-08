@@ -26,7 +26,7 @@ const SearchCardByName = () => {
             />
             <button onClick={searchByName}>Search ! </button>
             <div>
-                <h1>{cardData.name}</h1>
+                <CardComponent data = {cardData}/>
             </div>
         </div>
     );
