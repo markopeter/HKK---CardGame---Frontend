@@ -1,11 +1,12 @@
 import './App.css';
-import AllCard from "./components/AllCard";
 import ShowCard from "./components/ShowCard";
+import SearchCardByName from "./components/SearchCardByName";
 
 function App() {
   return (
     <div className="App">
       <ShowCard/>
+        <SearchCardByName/>
     </div>
   );
 }
