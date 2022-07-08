@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5a6b801e-efc4-4133-847f-29689cf3af9e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardgame/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cardgame/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +34,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PetProject---CardGame" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cardgame" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -84,6 +83,8 @@
       <option name="presentableId" value="Default" />
       <updated>1657126794029</updated>
       <workItem from="1657126795678" duration="5593000" />
+      <workItem from="1657265133337" duration="86000" />
+      <workItem from="1657267519244" duration="18000" />
     </task>
     <servers />
   </component>
@@ -95,7 +96,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
