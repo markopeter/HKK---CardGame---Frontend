@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import axios from 'axios';
 import CardComponent from "./CardComponent";
-
+import axios from "axios";
 
 const SearchCardByName = () => {
 
@@ -26,7 +25,9 @@ const SearchCardByName = () => {
             />
             <button onClick={searchByName}>Search ! </button>
             <div>
-                <CardComponent data={cardData} />
+                <div>
+                    <CardComponent{...cardData} />
+                </div>
             </div>
         </div>
     );
