@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import AllCard from "./AllCard";
 import {flushSync} from "react-dom";
+import Button from "@mui/material/Button";
+import {List, ListItem, ListItemButton, ListItemText} from "@mui/material";
 
 const url = `https://hkk-petproject.herokuapp.com/card/page`;
 const fetchCards = (page, size) => {
@@ -52,13 +54,22 @@ const GetAllCard = () => {
     };
     return (
         <div>
-            <button onClick = {wrapperFunctionPrev} disabled={page === 0}> Previous ! </button>
-            <button onClick = {wrapperFunctionNext} disabled={page === cardOnPage}> Next ! </button>
-            <button className="searchButton" onClick={handleClick}>Show all card</button>
+            <Button variant="contained" onClick = {wrapperFunctionPrev} disabled={page === 0}> Previous ! </Button>
+            <Button variant="contained" onClick = {wrapperFunctionNext} disabled={page === cardOnPage}> Next ! </Button>
+            <Button variant="contained" className="searchButton" onClick={handleClick}>Show all card</Button>
             {isShown && <div>
                 {card.content && card.content.map(element => {
                     return (
-                        <div> {element.name}</div>
+                        <nav aria-label="secondary mailbox folders">
+                            <List>
+                                <ListItem disablePadding>
+                                    <ListItemButton>
+                                        <ListItemText primary={element.name} />
+                                    </ListItemButton>
+                                </ListItem>
+
+                            </List>
+                        </nav>
                     )
                 })}
             </div>}
