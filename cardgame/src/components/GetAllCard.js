@@ -12,6 +12,7 @@ const GetAllCard = () => {
     const cardOnPage = 10;
     const [page, setPage] = useState(0);
     const [card, setCard] = useState([])
+    const [isShown, setIsShown] = useState(false);
 
     useEffect( () => {
         fetchCards(page, cardOnPage)
@@ -35,6 +36,7 @@ const GetAllCard = () => {
         fetchCards(page, cardOnPage).then((response) => {
             const data = response.data;
             setCard(data);
+            console.log(data);
         });
     }
     const wrapperFunctionPrev = () => {
@@ -44,17 +46,22 @@ const GetAllCard = () => {
             setCard(data);
         });
     }
+
+    const handleClick = event => {
+        setIsShown(current => !current);
+    };
     return (
         <div>
             <button onClick = {wrapperFunctionPrev} disabled={page === 0}> Previous ! </button>
             <button onClick = {wrapperFunctionNext} disabled={page === cardOnPage}> Next ! </button>
-            <div>
+            <button className="searchButton" onClick={handleClick}>Show all card</button>
+            {isShown && <div>
                 {card.content && card.content.map(element => {
                     return (
                         <div> {element.name}</div>
                     )
                 })}
-            </div>
+            </div>}
         </div>
     );
 };
