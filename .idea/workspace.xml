@@ -37,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cardgame" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -88,6 +88,7 @@
       <workItem from="1657126795678" duration="5593000" />
       <workItem from="1657257310627" duration="67000" />
       <workItem from="1657530226676" duration="216000" />
+      <workItem from="1657576010999" duration="71000" />
     </task>
     <servers />
   </component>

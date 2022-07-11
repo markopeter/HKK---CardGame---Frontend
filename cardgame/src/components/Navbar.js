@@ -5,6 +5,7 @@ import CardFilterDropDown from "./CardFilterDropDown";
 import SearchCardByName from "./SearchCardByName";
 import {AppBar, Box, IconButton, Toolbar, Typography} from "@mui/material";
 import Button from "@mui/material/Button";
+import GetAllCard from "./GetAllCard";
 
 function MenuIcon() {
     return null;
@@ -35,7 +36,9 @@ const Navbar = () => {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         <Link to="/searchcardbyname">Search card </Link>
                     </Typography>
-
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        <Link to="/getallcard">Show all card </Link>
+                    </Typography>
                 </Toolbar>
             </AppBar>
         </Box>
@@ -45,6 +48,7 @@ const Navbar = () => {
                         <Route path="/" element={<Home/>} />
                         <Route path="/cardfilter" element={<CardFilterDropDown/>} />
                         <Route path="/searchcardbyname" element={<SearchCardByName/>} />
+                        <Route path="/getallcard" element={<GetAllCard/>} />
                     </Routes>
                 </div>
             </div>
