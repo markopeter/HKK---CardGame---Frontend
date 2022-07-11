@@ -14,13 +14,13 @@ const GetAllCard = () => {
     const [card, setCard] = useState([])
     const [isShown, setIsShown] = useState(false);
 
-    useEffect( () => {
-        fetchCards(page, cardOnPage)
-            .then((response) => {
-                const data = response.data;
-                setCard(data);
-            });
-    }, [page])
+    // useEffect( () => {
+    //     fetchCards(page, cardOnPage)
+    //         .then((response) => {
+    //             const data = response.data;
+    //             setCard(data);
+    //         });
+    // }, [page])
     const nextPage = () => {
         flushSync(() => {
             setPage(c => c + 1);
