@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
-import AllCard from "./AllCard";
 import {flushSync} from "react-dom";
 import Button from "@mui/material/Button";
 import {List, ListItem, ListItemButton, ListItemText} from "@mui/material";
+import AddCardToDeck from "./AddCardToDeck";
 
 const url = `https://hkk-petproject.herokuapp.com/card/page`;
+const deckUrl = `https://hkk-petproject.herokuapp.com/deck/add-card`
 const fetchCards = (page, size) => {
     return axios.get(url, {params: {page: page, size: size}})
 }
@@ -15,14 +16,12 @@ const GetAllCard = () => {
     const [page, setPage] = useState(0);
     const [card, setCard] = useState([])
     const [isShown, setIsShown] = useState(false);
+    const [nameData, setNameData] = useState('');
+    const deckToCard = (childdata) => {
+        setNameData(childdata);
+    }
 
-    // useEffect( () => {
-    //     fetchCards(page, cardOnPage)
-    //         .then((response) => {
-    //             const data = response.data;
-    //             setCard(data);
-    //         });
-    // }, [page])
+
     const nextPage = () => {
         flushSync(() => {
             setPage(c => c + 1);
@@ -52,6 +51,17 @@ const GetAllCard = () => {
     const handleClick = event => {
         setIsShown(current => !current);
     };
+
+    const postData = (e) => {
+        e.preventDefault();
+        console.log(e.target.id);
+        console.log(nameData);
+        axios.post(deckUrl, {
+             id : e.target.id,name: nameData, withCredentials: false
+        }).then(() => {
+            console.log("Succes");
+        })
+    }
     return (
         <div>
             <Button variant="contained" onClick = {wrapperFunctionPrev} disabled={page === 0}> Previous ! </Button>
@@ -66,6 +76,7 @@ const GetAllCard = () => {
                                 <ListItem disablePadding>
                                     <ListItemButton>
                                         <ListItemText primary={element.name} />
+                                        <Button onClick={(e) => postData(e)} id={element.id} variant="contained"  >Add to deck</Button>
                                     </ListItemButton>
                                 </ListItem>
 
@@ -75,6 +86,9 @@ const GetAllCard = () => {
                     )
                 })}
             </div>}
+            <div>
+                <AddCardToDeck childToParent={deckToCard}/>
+            </div>
         </div>
     );
 };
