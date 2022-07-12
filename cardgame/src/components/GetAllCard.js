@@ -60,6 +60,7 @@ const GetAllCard = () => {
             {isShown && <div>
                 {card.content && card.content.map(element => {
                     return (
+                        <div key={element.id}>
                         <nav aria-label="secondary mailbox folders">
                             <List>
                                 <ListItem disablePadding>
@@ -70,6 +71,7 @@ const GetAllCard = () => {
 
                             </List>
                         </nav>
+                        </div>
                     )
                 })}
             </div>}

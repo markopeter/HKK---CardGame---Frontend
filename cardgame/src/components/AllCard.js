@@ -5,7 +5,7 @@ const AllCard = (props) => {
         <div>
             {props.content && props.content.map(element => {
                 return (
-                    <div> {element.name}</div>
+                    <div key={element.id}> {element.name}</div>
                 )
             })}
         </div>
