@@ -24,7 +24,7 @@ const DeckCards = (props) => {
             <div>
                 {deckCards && deckCards.map(element => {
                     return (
-                        <div> {element.name}</div>
+                        <div key={element.id}> {element.name}</div>
                     )
                 })}
             </div>}

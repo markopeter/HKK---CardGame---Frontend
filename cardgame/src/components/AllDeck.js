@@ -30,23 +30,37 @@ const AllDeck = () => {
     useEffect(() => {
         showCards();
     }, []);
+
+    const deleteDeck =  id => {
+        try {
+             axios.delete(`${url}/${id}`).then(() => showCards());
+             showCards();
+        } catch (error) {
+            alert(error)
+        }
+    }
+
+
     return (
         <div>
 
             <div>
                 {decks && decks.map(element => {
                     return (
+                        <div key={element.id}>
                         <nav aria-label="secondary mailbox folders">
                             <List>
                                 <ListItem disablePadding>
                                     <ListItemButton>
                                         <ListItemText primary={element.deckName} />
                                         <DeckCards data = {element}/>
+                                        <Button variant="contained" onClick={() => deleteDeck(element.id)}> Delete deck </Button>
                                     </ListItemButton>
                                 </ListItem>
 
                             </List>
                         </nav>
+                        </div>
                     )
                 })}
 
