@@ -4,6 +4,7 @@ import {flushSync} from "react-dom";
 import Button from "@mui/material/Button";
 import {List, ListItem, ListItemButton, ListItemText} from "@mui/material";
 import AddCardToDeck from "./AddCardToDeck";
+import CardComponent from "./CardComponent";
 
 const url = `https://hkk-petproject.herokuapp.com/card/page`;
 const deckUrl = `https://hkk-petproject.herokuapp.com/deck/add-card`
@@ -80,8 +81,7 @@ const GetAllCard = () => {
                             <List>
                                 <ListItem disablePadding>
                                     <ListItemButton>
-                                        <ListItemText primary={element.name} />
-                                        <ListItemText primary={element.manaCost} />
+                                            <CardComponent data={element}/>
                                         <Button onClick={(e) => postData(e)} id={element.id} variant="contained"  >Add to deck</Button>
                                     </ListItemButton>
                                 </ListItem>
