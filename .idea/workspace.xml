@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a6b801e-efc4-4133-847f-29689cf3af9e" name="Changes" comment="" />
+    <list default="true" id="5a6b801e-efc4-4133-847f-29689cf3af9e" name="Changes" comment="Add: ListItemText for manacost to the GetAllCard component.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,5 +120,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add: ListItemText for manacost to the GetAllCard component." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add: ListItemText for manacost to the GetAllCard component." />
   </component>
 </project>

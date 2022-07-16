@@ -49,6 +49,10 @@ const GetAllCard = () => {
     }
 
     const handleClick = event => {
+        fetchCards(page, cardOnPage).then((response) => {
+            const data = response.data;
+            setCard(data);
+        });
         setIsShown(current => !current);
     };
 
@@ -62,6 +66,7 @@ const GetAllCard = () => {
             console.log("Succes");
         })
     }
+
     return (
         <div>
             <Button variant="contained" onClick = {wrapperFunctionPrev} disabled={page === 0}> Previous ! </Button>
