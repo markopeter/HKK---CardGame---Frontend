@@ -15,7 +15,7 @@ const DeckCards = (props) => {
             .then(r => setDeckCards(r.data));
         setIsShown(current => !current);
     }
-    useEffect(() => { fetchDeckCard()},[]);
+
     return (
         <div>
 
