@@ -76,6 +76,7 @@ const GetAllCard = () => {
                                 <ListItem disablePadding>
                                     <ListItemButton>
                                         <ListItemText primary={element.name} />
+                                        <ListItemText primary={element.manaCost} />
                                         <Button onClick={(e) => postData(e)} id={element.id} variant="contained"  >Add to deck</Button>
                                     </ListItemButton>
                                 </ListItem>
