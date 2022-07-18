@@ -36,15 +36,52 @@
     transform: rotate(360deg);
   }
 }
-
 .imageContainer {
-  width: 80%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
+  width: 500px;
+  height : 280px;
+  justify-content: center;
+  text-align: center;
+  vertical-align:top;
+  display: inline-block;
 }
 
-.nameContainer {
-  text-align: center;
-  padding: 10px 20px;
+.cardContainer {
+  width:510px; height:300px; opacity:1.5;  background:yellow;
+  position: relative;
+
+
+}
+
+.cardUpperRight{
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+.cardUpperLeft{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+.cardBottomLeft{
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+.cardBottomRight{
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.caption {
+  display: block;
+}
+
+img {
+  width: 250px;
+  height: 250px;
 }

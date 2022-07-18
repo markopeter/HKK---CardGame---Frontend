@@ -4,6 +4,7 @@ import {flushSync} from "react-dom";
 import Button from "@mui/material/Button";
 import {List, ListItem, ListItemButton, ListItemText} from "@mui/material";
 import AddCardToDeck from "./AddCardToDeck";
+import CardComponent from "./CardComponent";
 
 const url = `https://hkk-petproject.herokuapp.com/card/page`;
 const deckUrl = `https://hkk-petproject.herokuapp.com/deck/add-card`
@@ -76,18 +77,16 @@ const GetAllCard = () => {
                 {card.content && card.content.map(element => {
                     return (
                         <div key={element.id}>
-                        <nav aria-label="secondary mailbox folders">
+
                             <List>
                                 <ListItem disablePadding>
                                     <ListItemButton>
-                                        <ListItemText primary={element.name} />
-                                        <ListItemText primary={element.manaCost} />
+                                            <CardComponent data={element}/>
                                         <Button onClick={(e) => postData(e)} id={element.id} variant="contained"  >Add to deck</Button>
                                     </ListItemButton>
                                 </ListItem>
 
                             </List>
-                        </nav>
                         </div>
                     )
                 })}
