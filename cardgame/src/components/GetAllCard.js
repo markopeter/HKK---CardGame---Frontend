@@ -77,7 +77,7 @@ const GetAllCard = () => {
                 {card.content && card.content.map(element => {
                     return (
                         <div key={element.id}>
-                        <nav aria-label="secondary mailbox folders">
+
                             <List>
                                 <ListItem disablePadding>
                                     <ListItemButton>
@@ -87,7 +87,6 @@ const GetAllCard = () => {
                                 </ListItem>
 
                             </List>
-                        </nav>
                         </div>
                     )
                 })}
