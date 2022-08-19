@@ -10,9 +10,10 @@ const SearchCardByName = () => {
     const [inputName, setInputName] = useState("");
     const [cardData, setCardData] = useState({});
     const url = `https://hkk-petproject.herokuapp.com/creature/${inputName}`;
+    const localUrl = `/api/creature/${inputName}`;
     const searchByName = () => {
 
-        axios.get(url, {params:
+        axios.get(localUrl, {params:
                 {
                     name : inputName}})
             .then(r => setCardData(r.data));

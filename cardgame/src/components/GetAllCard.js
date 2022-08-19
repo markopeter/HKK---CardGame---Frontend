@@ -7,9 +7,11 @@ import AddCardToDeck from "./AddCardToDeck";
 import CardComponent from "./CardComponent";
 
 const url = `https://hkk-petproject.herokuapp.com/card/page`;
+const localUrl = `/api/card/page`;
 const deckUrl = `https://hkk-petproject.herokuapp.com/deck/add-card`
+const localDeckUrl =`/api/deck/add-card`
 const fetchCards = (page, size) => {
-    return axios.get(url, {params: {page: page, size: size}})
+    return axios.get(localUrl, {params: {page: page, size: size}})
 }
 
 const GetAllCard = () => {
@@ -61,7 +63,7 @@ const GetAllCard = () => {
         e.preventDefault();
         console.log(e.target.id);
         console.log(nameData);
-        axios.post(deckUrl, {
+        axios.post(localDeckUrl, {
              id : e.target.id,name: nameData, withCredentials: false
         }).then(() => {
             console.log("Succes");

@@ -14,9 +14,10 @@ const CardFilterDropDown = () => {
     const [cardData, setCardData] = useState([]);
     const [detail, setDetail] = useState(options[0].value);
     const [inputValue, setInputValue] = useState('');
+    const localUrl = `/api/creature/detail/${detail}/value/${inputValue}`;
     const url = `https://hkk-petproject.herokuapp.com/creature/detail/${detail}/value/${inputValue}`;
     const fetchCards = () => {
-        axios.get(url, {params: {detail: detail, value: inputValue}})
+        axios.get(localUrl, {params: {detail: detail, value: inputValue}})
             .then(r => setCardData(r.data));
     }
     const changeDetail = (event) =>{

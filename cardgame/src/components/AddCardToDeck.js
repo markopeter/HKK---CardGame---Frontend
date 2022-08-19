@@ -9,9 +9,10 @@ const AddCardToDeck = ({childToParent}) => {
     const [deckName, setDeckName] = useState('');
     const [deckData, setDeckData] = useState({});
     const url = `https://hkk-petproject.herokuapp.com/deck/add-card/${deckName}`;
+    const localUrl = `/api/deck/add-card/${deckName}`
     const searchByName = () => {
 
-        axios.get(url, {params:
+        axios.get(localUrl, {params:
                 {
                     name : deckName}})
             .then(r => setDeckData(r.data));
