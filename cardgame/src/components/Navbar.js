@@ -4,9 +4,11 @@ import Home from "./Home";
 import CardFilterDropDown from "./CardFilterDropDown";
 import SearchCardByName from "./SearchCardByName";
 import {AppBar, Box, IconButton, Toolbar, Typography} from "@mui/material";
-import Button from "@mui/material/Button";
 import GetAllCard from "./GetAllCard";
 import AllDeck from "./AllDeck";
+import PrivateRoute from "../PrivateRoute";
+import Login from "./Login";
+
 
 function MenuIcon() {
     return null;
@@ -43,6 +45,10 @@ const Navbar = () => {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         <Link to="/getalldeck"> Decks </Link>
                     </Typography>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        <Link to="/login"> Login </Link>
+                    </Typography>
+
                 </Toolbar>
             </AppBar>
         </Box>
@@ -54,6 +60,15 @@ const Navbar = () => {
                         <Route path="/searchcardbyname" element={<SearchCardByName/>} />
                         <Route path="/getallcard" element={<GetAllCard/>} />
                         <Route path="/getalldeck" element={<AllDeck/>} />
+                        <Route path="/login" element ={<Login/>}/>
+                        <Route
+                            path="/getalldeck"
+                            element={
+                                <PrivateRoute>
+                                    <AllDeck/> />
+                                </PrivateRoute>
+                            }
+                        />
                     </Routes>
                 </div>
             </div>
