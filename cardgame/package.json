@@ -2,6 +2,7 @@
   "name": "cardgame",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8080/",
   "engines": {
     "npm": "8.12.1",
     "node": "18.3.0"
