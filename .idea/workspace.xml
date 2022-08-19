@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a6b801e-efc4-4133-847f-29689cf3af9e" name="Changes" comment="Add: ListItemText for manacost to the GetAllCard component.">
-      <change beforePath="$PROJECT_DIR$/cardgame/src/components/CardComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/cardgame/src/components/CardComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardgame/src/components/GetAllCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/cardgame/src/components/GetAllCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cardgame/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cardgame" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -94,6 +94,11 @@
       <workItem from="1657576010999" duration="71000" />
       <workItem from="1657788470389" duration="98000" />
       <workItem from="1657987900361" duration="28000" />
+      <workItem from="1658154777056" duration="607000" />
+      <workItem from="1658234051440" duration="1823000" />
+      <workItem from="1659025532825" duration="46000" />
+      <workItem from="1659603077640" duration="25000" />
+      <workItem from="1660142600383" duration="224000" />
     </task>
     <servers />
   </component>
