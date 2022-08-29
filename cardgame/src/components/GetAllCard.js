@@ -10,6 +10,7 @@ const url = `https://hkk-petproject.herokuapp.com/card/page`;
 const localUrl = `/api/card/page`;
 const deckUrl = `https://hkk-petproject.herokuapp.com/deck/add-card`
 const localDeckUrl =`/api/deck/add-card`
+let pagesNumber = 0;
 const fetchCards = (page, size) => {
     return axios.get(localUrl, {params: {page: page, size: size}})
 }
@@ -20,20 +21,18 @@ const GetAllCard = () => {
     const [card, setCard] = useState([])
     const [isShown, setIsShown] = useState(false);
     const [nameData, setNameData] = useState('');
+
     const deckToCard = (childdata) => {
         setNameData(childdata);
     }
 
 
     const nextPage = () => {
-        flushSync(() => {
             setPage(c => c + 1);
-        });
     }
     const prevPage = () => {
-        flushSync(() => {
             setPage(c => c - 1);
-        });
+            console.log(pagesNumber);
     }
     const wrapperFunctionNext = () => {
         nextPage();
@@ -55,6 +54,8 @@ const GetAllCard = () => {
         fetchCards(page, cardOnPage).then((response) => {
             const data = response.data;
             setCard(data);
+            console.log(data.totalPages);
+            pagesNumber = data.totalPages;
         });
         setIsShown(current => !current);
     };
@@ -73,7 +74,7 @@ const GetAllCard = () => {
     return (
         <div>
             <Button variant="contained" onClick = {wrapperFunctionPrev} disabled={page === 0}> Previous ! </Button>
-            <Button variant="contained" onClick = {wrapperFunctionNext} disabled={page === cardOnPage}> Next ! </Button>
+            <Button variant="contained" onClick = {wrapperFunctionNext} disabled={page === pagesNumber}> Next ! </Button>
             <Button variant="contained" className="searchButton" onClick={handleClick}>Show all card</Button>
             {isShown && <div>
                 {card.content && card.content.map(element => {
