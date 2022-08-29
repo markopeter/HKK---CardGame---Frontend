@@ -8,6 +8,7 @@ import GetAllCard from "./GetAllCard";
 import AllDeck from "./AllDeck";
 import PrivateRoute from "../PrivateRoute";
 import Login from "./Login";
+import GetAllOriginalCards from "./GetAllOriginalCards";
 
 
 function MenuIcon() {
@@ -48,6 +49,9 @@ const Navbar = () => {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         <Link to="/login"> Login </Link>
                     </Typography>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        <Link to="/GetAllOriginalCards"> All original cards </Link>
+                    </Typography>
 
                 </Toolbar>
             </AppBar>
@@ -61,6 +65,7 @@ const Navbar = () => {
                         <Route path="/getallcard" element={<GetAllCard/>} />
                         <Route path="/getalldeck" element={<AllDeck/>} />
                         <Route path="/login" element ={<Login/>}/>
+                        <Route path="/GetAllOriginalCards" element ={<GetAllOriginalCards/>}/>
                         <Route
                             path="/getalldeck"
                             element={
